@@ -4,6 +4,8 @@ import './css files/Admin.css'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
 
+
+
 export default function AdminPannel() {
   return (
         <>
@@ -52,11 +54,11 @@ export default function AdminPannel() {
                  </div>
                 </div>
 
-
+ 
              </div>
 
              <div className="col-4">
-              <img src="https://th.bing.com/th/id/R.7afaa77568df3b3270a693d6c28462e5?rik=WjpL0s8%2bPZ2oyA&riu=http%3a%2f%2f1.bp.blogspot.com%2f-r0h1Ukb6tDA%2fU8U2XfvaS_I%2fAAAAAAAAC1E%2f6bo1gbBZYyg%2fs1600%2fLogo%2bAIA.png&ehk=h9fqd1jXyyyPRmr882w9JTaoD0UPrxLXMDPi8bCTAaQ%3d&risl=&pid=ImgRaw&r=0" alt="" />
+              <img src= "./images/LOGO.png" alt="logo" />
              </div>
 
            <div className="col-3 columnDo">
