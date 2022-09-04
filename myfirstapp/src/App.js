@@ -1,12 +1,12 @@
 import './App.css';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
 import Home from './components/Home';
 import AdminPannel from './components/AdminPannel';
 import {Route ,Routes} from 'react-router-dom'
 
 import Header from './components/Header';
-
+import CreateNotice from './components/CreateNotice';
+import CusViewNotice from './components/CusViewNotice';
+import TrainDetailsForm from './components/TrainDetailsForm';
 
 
 
@@ -19,6 +19,12 @@ function App() {
        <Route path = "/head" element={<Header/>}/>
 
        <Route path = "/Admin" element={<AdminPannel/>}/>
+
+       <Route path = "/notice" element ={<CreateNotice/>} />
+
+       <Route path = "/Note" element ={<CusViewNotice/>} />
+
+       <Route path = "/trainDetails" element = {<TrainDetailsForm/> }/>
 
 
    </Routes>

@@ -44,7 +44,7 @@ export default function Home() {
 <div className="card">
 
   <div className="card-body">
-  <img src="https://alliedassociates.ca/wp-content/uploads/personal.png" alt="" />
+  <img src="./images/Vector1.svg"  alt="" />
   </div>
 
   <div className="card-footer"> 100% Succesfull  <br /> live Booking</div>
@@ -59,7 +59,7 @@ export default function Home() {
 <div className="card">
 
   <div className="card-body">
-    <img src="https://th.bing.com/th/id/OIP.9ospYbVwHHQSZmvH_-ZuXQHaHa?pid=ImgDet&w=512&h=512&rs=1" alt="" />
+    <img src="./images/vector2.svg" alt="" />
   </div>
 
   <div className="card-footer"> 100% Succesfull  <br /> live Booking</div>
@@ -74,7 +74,7 @@ export default function Home() {
 
       <div className="card">
         <div className="card-body">
-        <img src="https://th.bing.com/th/id/OIP.k5asR_dRJ_RGIYhHQe4k_QHaHa?pid=ImgDet&w=512&h=512&rs=1" alt="" />
+        <img src="./images/vector3.svg" alt="" />
         </div>
 
         <div className="card-footer"> Payment <br /> Security</div>
@@ -89,7 +89,7 @@ export default function Home() {
 
       <div className="card">
         <div className="card-body">
-              <img src="https://th.bing.com/th/id/R.6c477282d0c2d085ca8232658f80d78f?rik=UYsOaZ%2fvL42b6g&pid=ImgRaw&r=0" alt="" />
+              <img src="./images/vector4.svg" alt="" />
         </div>
 
         <div className="card-footer"> 24 Hours <br /> customer care </div>
