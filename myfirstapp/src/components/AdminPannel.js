@@ -17,44 +17,23 @@ export default function AdminPannel() {
 
              <div className="columnUp col-3">
 
-
-                <div className="card cc">
-                     
-                <div className="card-head">
-                   <h2> 12 </h2>
-                 </div>
-
-                 <div className="card-body">
-                   
-                    <h3> AUG</h3>
-                 </div>
-
-                 <div className="card-footer">
-                   <h4>2022</h4>
-                 </div>
-                    </div>
-                       
-                       <br />
-                       <br />
+                  <div className="row  ht ">
+                    
+                    12 <br />  AUG  <br /> 2022
                       
+                  </div>
 
+                     <br /> <br />
 
-                  <div className="card cc ">
-                 <div className="card-head">
-                   <h2> 10 </h2>
-                 </div>
-
-                 <div className="card-body">
-                   <h3> 30 </h3>
-                 </div>
-
-                 <div className="card-footer">
+                  <div className="row ht">
                    
-                   <h4> A.M </h4>
-                 </div>
-                </div>
+                   10 <br /> 30 <br /> A.M
+                   
 
- 
+                  </div>
+              
+                       
+
              </div>
 
              <div className="col-4">
