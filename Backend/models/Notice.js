@@ -11,7 +11,7 @@ const NoticeSchema =  new mongoose.Schema({
         type:String,
         required:true
      }
-
+     
     
 
 });

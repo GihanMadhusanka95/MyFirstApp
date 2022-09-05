@@ -11,12 +11,20 @@ const UsersRoutes = require('./routes/Users');
 
 const TrainDetailsRoutes = require('./routes/TrainDeails')
 
+const NoticeRoutes = require('./routes/Notice')
+
+const EmployeeRoutes = require('./routes/Employee')
 
 app.use(bodyparser.json());
 
 // route middleware
 app.use(UsersRoutes);
 app.use(TrainDetailsRoutes); 
+app.use(NoticeRoutes);
+app.use(EmployeeRoutes);
+
+
+
 
 const PORT = 8000;
 const DB_URL = 'mongodb+srv://binod:bino1999@cluster0.l1h44vy.mongodb.net/Spm_Project?retryWrites=true&w=majority';
