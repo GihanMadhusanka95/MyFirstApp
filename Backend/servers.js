@@ -9,11 +9,14 @@ const app = express();
 
 const UsersRoutes = require('./routes/Users');
 
+const TrainDetailsRoutes = require('./routes/TrainDeails')
+
 
 app.use(bodyparser.json());
 
 // route middleware
 app.use(UsersRoutes);
+app.use(TrainDetailsRoutes); 
 
 const PORT = 8000;
 const DB_URL = 'mongodb+srv://binod:bino1999@cluster0.l1h44vy.mongodb.net/Spm_Project?retryWrites=true&w=majority';

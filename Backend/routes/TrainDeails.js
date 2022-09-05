@@ -1,15 +1,17 @@
 const express = require ('express');
-const Users = require('../models/Users');
+
+const TrainDetails = require('../models/TrainDetails');
+
 const router = express.Router();
 
 
-// Save Users 
+// Save TrainDetails
 
-router.post('/users/save',(req,res)=>{
+router.post('/TrainDetails/save',(req,res)=>{
 
-    let newUsers = new Users(req.body);
+    let newTrainDetails = new TrainDetails(req.body);
 
-    newUsers.save((err)=>{
+    newTrainDetails.save((err)=>{
 
         if(err){
             return res.status(400).json({
@@ -17,15 +19,15 @@ router.post('/users/save',(req,res)=>{
             });
         }
         return res.status(200).json({
-            success:"User saved Successfully"
+            success:"TrainDetails saved Successfully"
         });
     });
 });
 
-// get User
+// get TrainDetails
 
-router.get('/users',(req,res)=>{
-       Users.find().exec((err,Users) =>{
+router.get('/TrainDetails',(req,res)=>{
+    TrainDetails.find().exec((err,TrainDetails) =>{
         if(err){
             return res.status(400).json({
               error:err
@@ -34,7 +36,7 @@ router.get('/users',(req,res)=>{
             
         return res.status(200).json({
             sucuss:true,
-            existingUsers:Users
+            existingTrainDetails:TrainDetails
         });
 
        });
@@ -42,9 +44,9 @@ router.get('/users',(req,res)=>{
 
 // update
 
-router.put('/users/update/:id',(req,res)=>{
+router.put('/TrainDetails/update/:id',(req,res)=>{
 
-    Users.findByIdAndUpdate(
+    TrainDetails.findByIdAndUpdate(
         req.params.id,
         {
             $set:req.body
@@ -64,15 +66,15 @@ router.put('/users/update/:id',(req,res)=>{
 
 // delete Users
 
-router.delete('/users/delete/:id',(req,res) =>{
-    Users.findByIdAndRemove(req.params.id).exec((err,deleteUsers) =>{
+router.delete('/TrainDetails/delete/:id',(req,res) =>{
+    TrainDetails.findByIdAndRemove(req.params.id).exec((err,deleteTrainDetails) =>{
 
         if(err) return res.status(400).json({
             message:"Delete Unsuccesfull",err
         });
 
         return res.json({
-            message:"Delete Succesfull",deleteUsers
+            message:"Delete Succesfull",deleteTrainDetails
         });
     });
 });
