@@ -67,7 +67,7 @@ router.put('/users/update/:id',(req,res)=>{
 // delete Users
 
 router.delete('/users/delete/:id',(req,res) =>{
-    Users.findByIdAndRemove(req.params.id).exac((err,deleteUsers) =>{
+    Users.findByIdAndRemove(req.params.id).exec((err,deleteUsers) =>{
 
         if(err) return res.status(400).json({
             message:"Delete Unsuccesfull",err
