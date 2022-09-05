@@ -1,4 +1,4 @@
-const mongoose = require('module');
+const mongoose = require('mongoose');
 
 const UserSchema =  new mongoose.Schema({
 
@@ -7,7 +7,7 @@ const UserSchema =  new mongoose.Schema({
         required:true
      },
 
-     ContatNumber:{
+     ContactNumber:{
         type:String,
         required:true
      },
@@ -19,4 +19,4 @@ const UserSchema =  new mongoose.Schema({
 
 });
 
-module.exports  = mongoose.model('Users',UserSchema)
+module.exports  = mongoose.model('Users',UserSchema);
