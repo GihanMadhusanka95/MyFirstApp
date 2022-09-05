@@ -7,10 +7,10 @@ export default function CreateNotice() {
 
  
   return (
-       <>
 
+     <>
 
-     <div>
+   <div>
         <Header/>
      </div>      
                               
@@ -32,7 +32,6 @@ export default function CreateNotice() {
 <label for="notice">Notice:</label>  <br /> <textarea name="" id="" cols="60" rows="10"></textarea>
 <br />
 <input className='in' type="submit" />
-
 
 
 </form>
