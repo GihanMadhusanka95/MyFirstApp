@@ -3,7 +3,7 @@ import './css files/Feedback.css'
 import Footer from './Footer'
 import Header from './Header'
 
-export default function UserProfile() {
+export default function Feedback() {
   return (
       <>
          <div>
@@ -30,19 +30,26 @@ export default function UserProfile() {
 
          <div className="container bbd">
                 
-                <h3>Profile Information</h3>
-               
+                <h3>How was Express Lanka ?</h3>
+                <h5> We appriciate feedback about <br /> your Experiance</h5>
 
                 <div className='dg'>
-                    
-               <h4>Full Name :</h4>  <h5> </h5>      <br />
+                    <form action="">
 
-               <h4> Contact Number : </h4>:  <h5> </h5>
+                      <label className='jj'> Email </label>
+                      <input className='ip form-control bn' type="text" /> 
 
-                <h4> Email : </h4>  <h5> </h5>
+                      <br />
+
+                      <label className='jj'> Feedback </label>
+                      <input className='ip form-control bn ' type="text" />
+
+                      <input className='hh' type="submit" />
+
+                      
 
 
-
+                    </form>
                 </div>
 
          </div>
