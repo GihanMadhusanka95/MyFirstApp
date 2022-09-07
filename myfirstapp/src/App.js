@@ -11,6 +11,10 @@ import Feedback from './components/Feedback';
 import UserProfile from './components/UserProfile';
 import Login from './components/Login';
 import Register from './components/Register';
+import EditTrainDetails from './components/EditTrainDetails';
+import EditNotice from './components/EditNotice';
+import NoticeReport from './components/NoticeReport';
+
 
 
 
@@ -37,6 +41,12 @@ function App() {
        <Route path="/Login" element ={<Login/>} />
 
        <Route path="/register" element ={<Register/>} />
+
+       <Route path="/editTrainDetails" element ={<EditTrainDetails/>} />
+
+       <Route path="/editNotice" element ={<EditNotice/>} />
+
+       <Route path="/noticeReport" element ={<NoticeReport/>} />
 
 
    </Routes>
