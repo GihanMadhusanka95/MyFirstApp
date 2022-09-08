@@ -1,12 +1,18 @@
 import React from 'react'
 import './css files/NoticeReport.css'
 import { Link } from 'react-router-dom'
+import Header from './Header'
+import Footer from './Footer'
 
 export default function NoticeReport() {
   return (
 
        <>
-       
+
+       <div>
+        <Header/>
+       </div>
+
            <div className="divg"> 
 
                 
@@ -130,7 +136,10 @@ export default function NoticeReport() {
 
 
            </div>
-
+        
+         <div className='lop'>
+            <Footer/>
+         </div>
        
        </>
   )

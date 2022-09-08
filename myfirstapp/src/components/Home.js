@@ -30,7 +30,7 @@ export default function Home() {
 
     <div className="rightdiv col-9">
  
-     <div className="image"> <img src="https://lp-cms-production.imgix.net/image_browser/Train_crossing_bridge_sri_lanka_s.jpg?auto=format&fit=crop&q=40&sharp=10&vib=20&ixlib=react-8.6.4" alt="" /> </div>
+     <div className="image"> <img  className='ggs' src="https://lp-cms-production.imgix.net/image_browser/Train_crossing_bridge_sri_lanka_s.jpg?auto=format&fit=crop&q=40&sharp=10&vib=20&ixlib=react-8.6.4" alt="" /> </div>
 
      <br />
 
