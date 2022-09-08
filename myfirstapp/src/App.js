@@ -14,6 +14,9 @@ import Register from './components/Register';
 import EditTrainDetails from './components/EditTrainDetails';
 import EditNotice from './components/EditNotice';
 import NoticeReport from './components/NoticeReport';
+import EmployeeForm from './components/EmployeeForm';
+import EmpApplication from './components/EmpApplication';
+import TrainDetilsAdminView from './components/TrainDetilsAdminView';
 
 
 
@@ -47,6 +50,15 @@ function App() {
        <Route path="/editNotice" element ={<EditNotice/>} />
 
        <Route path="/noticeReport" element ={<NoticeReport/>} />
+
+       <Route path="/employeeForm" element ={<EmployeeForm/>} />
+
+       <Route path= '/empApplication' element ={<EmpApplication/>} />
+
+       <Route path= '/AdminTrain' element ={<TrainDetilsAdminView/>} />
+
+
+
 
 
    </Routes>

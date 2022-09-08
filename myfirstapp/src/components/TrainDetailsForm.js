@@ -31,8 +31,9 @@ export default function TrainDetailsForm() {
 
 
      <label className='lab'> Startup Time : </label>
-     <input className='ip form-control' type="text" />
+     <input className='ip form-control' type="text" />  <br />
 
+       <button class="btn btn-primary  by"> Add </button>
 
      </form>
      
