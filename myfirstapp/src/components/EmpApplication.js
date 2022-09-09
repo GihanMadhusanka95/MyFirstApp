@@ -15,6 +15,8 @@ const [Email,setEmail] = useState('');
 const [Address,setAddress] = useState('');
 
 const handleClick = async (e) => {
+
+  alert("Employee Added Succesfully");
    
     e.preventDefault();
    try{

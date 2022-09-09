@@ -16,7 +16,9 @@ const [Email,setEmail] = useState('');
 const [Password,setPassword] = useState('');
 
 const handleClick = async (e) => {
-   
+        
+   alert("User Registerd Succesfully");
+
     e.preventDefault();
    try{
 

@@ -15,6 +15,8 @@ export default function TrainDetailsForm() {
   const [TrainType,setTrainType] = useState('');
   
   const handleClick = async (e) => {
+
+   alert("Train Details Succesfully");
      
       e.preventDefault();
      try{

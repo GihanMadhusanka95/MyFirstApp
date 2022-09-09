@@ -13,6 +13,8 @@ const [Notice,setNotice] = useState('');
 
 
 const handleClick = async (e) => {
+
+   alert("Notice Added Succesfully");
    
     e.preventDefault();
    try{
