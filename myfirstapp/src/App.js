@@ -17,6 +17,8 @@ import NoticeReport from './components/NoticeReport';
 import EmployeeForm from './components/EmployeeForm';
 import EmpApplication from './components/EmpApplication';
 import TrainDetilsAdminView from './components/TrainDetilsAdminView';
+import PublishJob from './components/PublishJob';
+import RecivedApplication from './components/RecivedApplication';
 
 
 
@@ -56,6 +58,10 @@ function App() {
        <Route path= '/empApplication' element ={<EmpApplication/>} />
 
        <Route path= '/AdminTrain' element ={<TrainDetilsAdminView/>} />
+
+       <Route path= '/PublishJob' element ={<PublishJob/>} />
+
+       <Route path= '/recived' element ={<RecivedApplication/>} />
 
 
 
