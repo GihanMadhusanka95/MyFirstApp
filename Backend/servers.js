@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose')
 const bodyparser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 
@@ -16,6 +17,10 @@ const NoticeRoutes = require('./routes/Notice')
 const EmployeeRoutes = require('./routes/Employee')
 
 app.use(bodyparser.json());
+app.use(cors());
+
+
+
 
 // route middleware
 app.use(UsersRoutes);

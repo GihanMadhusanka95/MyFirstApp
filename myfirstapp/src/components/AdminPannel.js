@@ -37,7 +37,7 @@ export default function AdminPannel() {
              </div>
 
              <div className="col-4">
-              <img src= "./images/LOGO.png" alt="logo" />
+              <img className='hhj' src= "./images/LOGO.png" alt="logo" />
              </div>
 
            <div className="col-3 columnDo">
