@@ -17,9 +17,9 @@ const EmployeeSchema =  new mongoose.Schema({
         required:true
      },
     
-        ContactNumber:{
-        type:String,
-        required:true
+      ContactNumber:{
+      type:String,
+      required:true
      },
 
     Email:{
