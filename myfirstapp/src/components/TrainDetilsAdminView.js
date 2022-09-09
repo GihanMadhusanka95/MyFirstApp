@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import './css files/TrainDetilsAdmin.css'
+import './css files/TrainDetailsAdmin.css'
 
 export default function TrainDetilsAdminView() {
   return (

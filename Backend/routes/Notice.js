@@ -1,15 +1,13 @@
 const express = require ('express');
-
-const Notice = require('../models/Notice');
-
+const Notice = require ('../models/Notice');
 const router = express.Router();
 
 
-// Save Notice
+// Save Users 
 
 router.post('/Notice/save',(req,res)=>{
 
-    let newNotice = new TrainDetails(req.body);
+    let newNotice = new Notice(req.body);
 
     newNotice.save((err)=>{
 
@@ -19,15 +17,15 @@ router.post('/Notice/save',(req,res)=>{
             });
         }
         return res.status(200).json({
-            success:"New Notice saved Successfully"
+            success:"Notice saved Successfully"
         });
     });
 });
 
-// get Notice
+// get User
 
 router.get('/Notice',(req,res)=>{
-    Notice.find().exec((err,TrainDetails) =>{
+    Notice.find().exec((err,Notice) =>{
         if(err){
             return res.status(400).json({
               error:err
@@ -64,10 +62,10 @@ router.put('/Notice/update/:id',(req,res)=>{
 });
 
 
-// delete Notice
+// delete Users
 
 router.delete('/Notice/delete/:id',(req,res) =>{
-    TrainDetails.findByIdAndRemove(req.params.id).exec((err,deleteNotice) =>{
+    Notice.findByIdAndRemove(req.params.id).exec((err,deleteNotice) =>{
 
         if(err) return res.status(400).json({
             message:"Delete Unsuccesfull",err

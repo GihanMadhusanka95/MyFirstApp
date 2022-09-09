@@ -19,6 +19,9 @@ const EmployeeRoutes = require('./routes/Employee')
 app.use(bodyparser.json());
 app.use(cors());
 
+
+
+
 // route middleware
 app.use(UsersRoutes);
 app.use(TrainDetailsRoutes); 
