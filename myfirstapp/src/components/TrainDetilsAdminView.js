@@ -58,9 +58,9 @@ export default function TrainDetilsAdminView() {
     
     
     
-    <div className='kkn'>
+    {/* <div className='kkn'>
         <Footer/>
-    </div>
+    </div> */}
     
     </>
  

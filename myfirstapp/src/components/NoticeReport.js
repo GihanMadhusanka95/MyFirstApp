@@ -138,7 +138,7 @@ export default function NoticeReport() {
            </div>
         
          <div className='lop'>
-            <Footer/>
+            {/* <Footer/> */}
          </div>
        
        </>

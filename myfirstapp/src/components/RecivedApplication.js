@@ -137,9 +137,9 @@ export default function RecivedApplication() {
 
            </div>
         
-         <div className='lop'>
+         {/* <div className='lop'>
             <Footer/>
-         </div>
+         </div> */}
        
        </>
   )

@@ -61,13 +61,25 @@ const handleClick = async (e) => {
 
 
 <label for="date">Notice:</label>  <br />
-          <input type="text"
+          <input  className='ffg' type="text"
            id='Notice'
            value={Notice}
            onChange = {(e) =>setNotice(e.target.value)} />
 <br />
 
-      <button class="btn btn-primary  by" onClick={handleClick} > Add </button>
+           
+           <div className="bbn"> 
+           
+           <button class="btn btn-primary  by" onClick={handleClick} > Add </button>
+           
+           </div>
+
+     <div className="photodd">
+
+    
+     <img className='ggf' src="./images/for.jpg" alt="" />
+
+     </div>
 
 
 </form>
