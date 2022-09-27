@@ -1,87 +1,66 @@
 import React from 'react'
-import './css files/Feedback.css'
-import Footer from './Footer'
-import Header from './Header'
-//import axios, { Axios } from 'axios'
-import { useEffect } from 'react'
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import axios from 'axios'
 
 export default function UserProfile() {
- 
-     const [Users , setUsers] = useState([])
+    const[Users,setUsers] = useState([]);
 
-     useEffect(() => {
-      axios.get('http://localhost:8000/users')
-      .then(Response => {
-         console.log(Response)
-         setUsers(Response.data)
-        })
-     })
-     .catch(Error =>{
-      console.log(Error)
-     })
+    useEffect(() => {
+        axios.get('http://localhost:8000/users/').then(res=> {
+            setUsers(res.data);
+            console.log(res.data);
 
-   
-
+        },[])
+            .catch(err => {
+                console.log(err);
+            })
+    })
 
   return (
-      <>
-         <div>
-            <Header/>
-         </div>
-             
-      <div className="row bba"> 
-      
-      <div className="col-3 bbb">
+    <div>
 
-      <div>
-     <ul class="list-group vn">
-  <li class="list-group-item vm">Profile Information</li>
-  <li class="list-group-item vm"> My Bookings</li>
-  <li class="list-group-item vm"> My canselations</li>
-  <li class="list-group-item vm">My payment Option </li>
-  <li class="list-group-item vm"> Add Feedback </li>
-</ul>
-     </div>
-
-      </div>
-
-      <div className="col-7 bbc">
-
-         <div className="container bbd">
-                
-                <h3>Profile Information</h3>
-               
-
-                <div className='dg'>
-                    
-               <h4>Full Name :</h4>  <h5> </h5>      <br />
-
-               <h4> Contact Number : </h4>:  <h5> </h5>
-
-                <h4> Email : </h4>  <h5> </h5>
-
-                 <div>
-
-                  
-                 </div>
-
+    <div>
+            
+            <br />
+                <br/>
+                <div className="row">
+                    <div className="col-md-3"></div>
+                    <div className="col-md-8">
+                        <table className="table">
+                            <thead className="thead-dark">
+                                <tr>
+                                    <th scope="col">User Name </th>
+                                    <th scope="col">Contact Number </th>
+                                    
+                                 <th className="text-center" scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {Users.map(Users=><tr key={Users.Name}>
+                                    <td>{Users.Name}</td>
+                                    <td>{Users.ContactNumber}</td>
+                                    <td className="text-center">
+    
+                                    </td>
+                                </tr>
+                                )}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-
-         </div>
-
-
-      </div>
-      
-      </div>
-      
-      
-      
-      <div className='jjk'>
-        <Footer/>
-      </div>
-      
-      </>
-  )
-}
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        </div>
+    )
+     
+    }
+    
+    

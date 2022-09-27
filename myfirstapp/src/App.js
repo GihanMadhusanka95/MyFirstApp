@@ -20,6 +20,7 @@ import TrainDetilsAdminView from './components/TrainDetilsAdminView';
 import PublishJob from './components/PublishJob';
 import RecivedApplication from './components/RecivedApplication';
 import Calculate from './components/Calculate';
+import TrainDetailsList from './components/TrainDetailsList';
 
 
 
@@ -66,6 +67,8 @@ function App() {
        <Route path= '/recived' element ={<RecivedApplication/>} />
 
        <Route path= '/test' element ={<Calculate/>} />
+
+       <Route path= '/viewtrain' element ={<TrainDetailsList/>} />
 
 
 
