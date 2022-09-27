@@ -2,8 +2,29 @@ import React from 'react'
 import './css files/Feedback.css'
 import Footer from './Footer'
 import Header from './Header'
+//import axios, { Axios } from 'axios'
+import { useEffect } from 'react'
+import { useState } from 'react'
+import axios from 'axios'
 
 export default function UserProfile() {
+ 
+     const [Users , setUsers] = useState([])
+
+     useEffect(() => {
+      axios.get('http://localhost:8000/users')
+      .then(Response => {
+         console.log(Response)
+         setUsers(Response.data)
+        })
+     })
+     .catch(Error =>{
+      console.log(Error)
+     })
+
+   
+
+
   return (
       <>
          <div>
@@ -41,7 +62,10 @@ export default function UserProfile() {
 
                 <h4> Email : </h4>  <h5> </h5>
 
+                 <div>
 
+                  
+                 </div>
 
                 </div>
 
