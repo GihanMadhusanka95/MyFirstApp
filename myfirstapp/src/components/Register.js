@@ -16,12 +16,9 @@ const [Email,setEmail] = useState('');
 const [Password,setPassword] = useState('');
 
 const handleClick = async (e) => {
-     
-   
-   
+       
    alert("User Registerd Succesfully");
-
-    e.preventDefault();
+   e.preventDefault();
    try{
 
       const resp = await axios.post('http://localhost:8000/users/save',{Name:Name,ContactNumber:ContactNumber,Email:Email,Password:Password});
