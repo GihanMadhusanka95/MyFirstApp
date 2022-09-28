@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from "react-router-dom";
 import axios from'axios'
 
 
@@ -8,8 +9,8 @@ export default function TrainDetailsList() {
 
     useEffect(() => {
         axios.get(`http://localhost:8000/TrainDetails`).then(res=> {
-            setTdetails(res.data);
-            console.log(res.data)
+            setTdetails(res.data.existingTrainDetails);
+            console.log(res.data.existingTrainDetails)
          
 
         })
@@ -18,6 +19,17 @@ export default function TrainDetailsList() {
             })
     },[])
 
+   const deleteMyEmployee =((id)=>{
+
+
+   axios.delete(`http://localhost:8000/TrainDetails/delete/${id}`).then((res)=>{
+   alert("delete succesfull")
+   });
+  
+
+
+
+   })
 
    
 
@@ -51,6 +63,35 @@ export default function TrainDetailsList() {
                                 <td>{bk.EndPoint}</td>
                                 <td>{bk.StartUpTime}</td>
                                 <td>{bk.TrainType}</td>
+
+                                <td class="table-action">
+                              <button
+                                class="btn btn-pill btn-danger btn-sm"
+                                style={{ marginLeft: 45, width: 60 }}
+                                onClick={() =>{ deleteMyEmployee(bk._id)
+                                    setTimeout(()=>{
+                                        window.location.reload(true);
+                                    },2050)
+                                
+                                }}
+                              >
+                                Delete
+                              </button>
+                              <Link
+                                to={"/TrainEdit/" + bk._id}
+                                class="top-bar-link"
+                              >
+                                <button
+                                  class="btn btn-pill btn-success btn-sm"
+                                  style={{ marginLeft: 10, width: 60 }}
+                                >
+                                  Edit
+                                </button>
+                              </Link>
+                            
+                            </td>
+
+
 
 
                             </tr>
