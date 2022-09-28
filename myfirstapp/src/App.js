@@ -21,6 +21,8 @@ import PublishJob from './components/PublishJob';
 import RecivedApplication from './components/RecivedApplication';
 import Calculate from './components/Calculate';
 import TrainDetailsList from './components/TrainDetailsList';
+import GetTrainDetails from './components/GetTrainDetails';
+import AAA from './components/AAA';
 
 
 
@@ -69,6 +71,10 @@ function App() {
        <Route path= '/test' element ={<Calculate/>} />
 
        <Route path= '/viewtrain' element ={<TrainDetailsList/>} />
+
+       <Route path= '/cc1' element ={<GetTrainDetails/>} />
+
+       <Route path= '/aa' element ={<AAA/>} />
 
 
 

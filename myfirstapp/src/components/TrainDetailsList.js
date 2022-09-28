@@ -9,6 +9,7 @@ export default function TrainDetailsList() {
     useEffect(() => {
         axios.get(`http://localhost:8000/TrainDetails`).then(res=> {
             setTdetails(res.data);
+            console.log(res.data)
          
 
         })
@@ -16,6 +17,9 @@ export default function TrainDetailsList() {
                 console.log(err);
             })
     },[])
+
+
+   
 
   return (
     <div>
@@ -37,7 +41,8 @@ export default function TrainDetailsList() {
                         </thead>
                         <tbody>
                             {
-                          tdetails.map ( bk => ( <tr key={bk._id}>
+                          tdetails.map ( (bk) => { 
+                             return <tr>
 
 
                                 <td>{bk.TrainName}</td>
@@ -49,8 +54,9 @@ export default function TrainDetailsList() {
 
 
                             </tr>
-                          )
-
+                            
+                           }
+                            
                             )
                             }
                         </tbody>
