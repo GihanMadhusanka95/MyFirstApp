@@ -23,6 +23,7 @@ import Calculate from './components/Calculate';
 import TrainDetailsList from './components/TrainDetailsList';
 import GetTrainDetails from './components/GetTrainDetails';
 import AAA from './components/AAA';
+import TrainUpdate from './components/TrainUpdate';
 
 
 
@@ -75,6 +76,8 @@ function App() {
        <Route path= '/cc1' element ={<GetTrainDetails/>} />
 
        <Route path= '/aa' element ={<AAA/>} />
+
+       <Route path= '/TrainEdit' element ={<TrainUpdate/>} />
 
 
 
