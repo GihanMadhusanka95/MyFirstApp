@@ -21,9 +21,11 @@ import PublishJob from './components/PublishJob';
 import RecivedApplication from './components/RecivedApplication';
 import Calculate from './components/Calculate';
 import TrainDetailsList from './components/TrainDetailsList';
-import GetTrainDetails from './components/GetTrainDetails';
+
 import AAA from './components/AAA';
 import TrainUpdate from './components/TrainUpdate';
+import EmployeeDetailsList from './components/EmployeeDetailsList';
+import NoticeDetailsList from './components/NoticeDetailsList';
 
 
 
@@ -73,11 +75,15 @@ function App() {
 
        <Route path= '/viewtrain' element ={<TrainDetailsList/>} />
 
-       <Route path= '/cc1' element ={<GetTrainDetails/>} />
+      
 
        <Route path= '/aa' element ={<AAA/>} />
 
        <Route path= '/TrainEdit' element ={<TrainUpdate/>} />
+
+       <Route path= '/viewemployee' element ={<EmployeeDetailsList/>} />
+
+       <Route path= '/vieweNotice' element ={<NoticeDetailsList/>} />
 
 
 

@@ -42,6 +42,23 @@ router.get('/TrainDetails',(req,res)=>{
        });
 });
 
+router.get('/getSelectedTrainDetails',(req,res)=>{
+    const id = req.params.id;
+    TrainDetails.findById(id).exec((err,TrainDetails) =>{
+        if(err){
+            return res.status(400).json({
+              error:err
+            });
+        }
+            
+        return res.status(200).json({
+            sucuss:true,
+            existingTrainDetails:TrainDetails
+        });
+
+       });
+});
+
 // update
 
 router.put('/TrainDetails/update/:id',(req,res)=>{
