@@ -16,6 +16,8 @@ const NoticeRoutes = require('./routes/Notice')
 
 const EmployeeRoutes = require('./routes/Employee')
 
+const JobRoutes = require('./routes/Job')
+
 app.use(bodyparser.json());
 app.use(cors());
 
@@ -27,6 +29,7 @@ app.use(UsersRoutes);
 app.use(TrainDetailsRoutes); 
 app.use(NoticeRoutes);
 app.use(EmployeeRoutes);
+app.use(JobRoutes);
 
 
 
