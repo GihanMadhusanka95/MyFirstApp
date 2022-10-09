@@ -2,6 +2,7 @@ import React from 'react'
 import './css files/Home.css'
 import Header from './Header'
 import Footer from './Footer'
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -14,11 +15,16 @@ export default function Home() {
     
      <div>
      <ul class="list-group">
-  <li class="list-group-item">View Shedule</li>
-  <li class="list-group-item"> Ticket Booking</li>
-  <li class="list-group-item">Cansel Ticket</li>
-  <li class="list-group-item">Pay Online</li>
-  <li class="list-group-item">Job Vacancy</li>
+  <li class="list-group-item"> <Link to = "/Shedule"> View Shedule  </Link>  </li>
+
+  <li class="list-group-item"> <Link to = "/Shedule"> Ticket Booking  </Link>  </li>
+
+  <li class="list-group-item"> <Link to = "/Shedule"> Cansel Ticket  </Link>  </li>
+
+  <li class="list-group-item"> <Link to = "/Shedule"> Pay Online  </Link>  </li>
+
+  <li class="list-group-item"> <Link to = "/Shedule">  Job Vacancy  </Link>  </li>
+  
 </ul>
      </div>
 

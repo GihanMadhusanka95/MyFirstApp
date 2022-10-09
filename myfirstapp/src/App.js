@@ -22,10 +22,15 @@ import RecivedApplication from './components/RecivedApplication';
 import Calculate from './components/Calculate';
 import TrainDetailsList from './components/TrainDetailsList';
 
-import AAA from './components/AAA';
+
 import TrainUpdate from './components/TrainUpdate';
 import EmployeeDetailsList from './components/EmployeeDetailsList';
 import NoticeDetailsList from './components/NoticeDetailsList';
+
+import UserProfileView from './components/UserProfileView';
+import ViewShedule from './components/ViewShedule';
+
+import AddJob from './components/AddJob';
 
 
 
@@ -55,15 +60,23 @@ function App() {
 
        <Route path="/register" element ={<Register/>} />
 
+
+
+
        <Route path="/editTrainDetails" element ={<EditTrainDetails/>} />
 
        <Route path="/editNotice" element ={<EditNotice/>} />
 
        <Route path="/noticeReport" element ={<NoticeReport/>} />
 
+
+
+
        <Route path="/employeeForm" element ={<EmployeeForm/>} />
 
        <Route path= '/empApplication' element ={<EmpApplication/>} />
+
+
 
        <Route path= '/AdminTrain' element ={<TrainDetilsAdminView/>} />
 
@@ -77,13 +90,36 @@ function App() {
 
       
 
-       <Route path= '/aa' element ={<AAA/>} />
+      
 
        <Route path= '/TrainEdit' element ={<TrainUpdate/>} />
 
        <Route path= '/viewemployee' element ={<EmployeeDetailsList/>} />
 
        <Route path= '/vieweNotice' element ={<NoticeDetailsList/>} />
+
+       <Route path= '/UserProfile' element ={<UserProfileView/>} />
+
+
+       // Home page Components 
+
+       // view Shedule 
+       <Route path= '/Shedule' element ={<ViewShedule/>} />
+
+
+
+
+
+
+       // Employee Components 
+
+       <Route path= '/addjob' element ={<AddJob/>} />
+
+
+
+
+
+
 
 
 

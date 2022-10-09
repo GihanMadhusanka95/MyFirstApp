@@ -19,3 +19,13 @@
     height: 20px;
 
 }
+
+.ffg{
+   
+    position:static;
+     display:flex;
+      flex-direction:column; 
+      justify-content:space-between;
+
+  
+}

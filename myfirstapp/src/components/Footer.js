@@ -5,7 +5,8 @@ import './css files/color.css'
 
 export default function Footer() {
   return (
-    <>
+    <> 
+    <div className='ffg'>
     <div className="row">
 
     <div className="cb cl col-6">
@@ -28,6 +29,8 @@ export default function Footer() {
          <span className='fe'>  Follow us On </span>  <br />
 
     </div>
+  </div>
+
   </div>
     
     </>
