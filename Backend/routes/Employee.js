@@ -120,7 +120,7 @@ router.delete('/Employee/delete/:id',(req,res) =>{
 
 router.put('/Employee/update/:id',(req,res)=>{
 
-    Employee.findByIdAndUpdateee(
+    Employee.findByIdAndUpdate(
         req.params.id,
         {
             $set:req.body
