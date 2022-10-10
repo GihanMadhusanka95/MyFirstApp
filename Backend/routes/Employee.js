@@ -33,12 +33,7 @@ router.get('/Employee',(req,res)=>{
         }
             
       
-          
-            :
-        });
-
-       });
-});
+     
 
 // update
 
