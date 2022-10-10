@@ -117,3 +117,22 @@ router.delete('/Employee/delete/:id',(req,res) =>{
         });
     });
 });
+
+router.put('/Employee/update/:id',(req,res)=>{
+
+    Employee.findByIdAndUpdate(
+        req.params.id,
+        {
+            $set:req.body
+        },
+        (err,post)=>{
+            if(err){
+                return res.status(400).json({error:err});
+            }
+
+            return res.status(200).json({
+                success:"Update Succesfully"
+            });
+        }
+    );
+});
