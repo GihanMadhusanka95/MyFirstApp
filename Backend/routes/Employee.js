@@ -83,7 +83,7 @@ router.delete('/Employee/delete/:id',(req,res) =>{
     Employee.findByIdAndRemove(req.params.id).exec((err,deleteEmployee) =>{
 
         if(err) return res.status(400).json({
-            message:"Delete Unsuccesfull",err
+            message:"Deleted Unsuccesfull",err
         });
 
         return res.json({
