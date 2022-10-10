@@ -87,7 +87,8 @@ message:"Delete Unsuccesfull",err
        });
 
 return res.json({
-          message:"Delete Succesfull",
+    Employee.findByIdAndRemove(req.params.id).exec((err,deleteEmployee) =>{
+        message:"Delete Succesfull",
     });
 });
 module.exports = router;
