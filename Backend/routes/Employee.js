@@ -87,7 +87,7 @@ message:"Delete Unsuccesfull",err
        });
 
 return res.json({
-          message:"Delete Succesfull",deleteEmployee
+          message:"Delete Succesfull",
     });
 });
 module.exports = router;
