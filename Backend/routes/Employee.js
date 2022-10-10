@@ -79,16 +79,15 @@ router.delete('/Employee/delete/:id',(req,res) =>{
 
 
 
-router.delete('/Employee/delete/:id',(req,res) =>{
-    Employee.findByIdAndRemove(req.params.id).exec((err,deleteEmployee) =>{
+//router.delete('/Employee/delete/:id',(req,res) =>{
+    //Employee.findByIdAndRemove(req.params.id).exec((err,deleteEmployee) =>{
 
-        if(err) return res.status(400).json({
-            message:"Delete Unsuccesfull",err
-        });
+       // if(err) return res.status(400).json({
+//message:"Delete Unsuccesfull",err
+      // });
 
-        return res.json({
-            message:"Delete Succesfull",deleteEmployee
-        });
-    });
-});
+//return res.json({
+          //  message:"Delete Succesfull",deleteEmployee
+//    });
+//});
 module.exports = router;
