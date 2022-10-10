@@ -5,6 +5,25 @@ const router = express.Router();
 
 // Save Users 
 
+router.post('/users/login',(req,res)=>{
+
+    let newUsers = new Users(req.body);
+
+    newUsers.save((err)=>{
+
+        if(err){
+            return res.status(400).json({
+                error:err
+            });
+        }
+        return res.status(200).json({
+            success:"User saved Successfully"
+        });
+    });
+});
+
+// Save Users 
+
 router.post('/users/save',(req,res)=>{
 
     let newUsers = new Users(req.body);
