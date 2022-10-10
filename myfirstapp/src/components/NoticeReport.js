@@ -34,6 +34,7 @@ export default function NoticeReport() {
                   
            </div>
 
+
         
 
         <div className="col-6">  
@@ -136,6 +137,7 @@ export default function NoticeReport() {
 
 
            </div>
+           <br />
         
          <div className='lop'>
             <Footer/>
