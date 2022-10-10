@@ -31,6 +31,10 @@ export default function ViewShedule() {
 
    })
 
+//    const buttonClick = (id) => {
+
+//    }
+
    
 
   return (
@@ -67,6 +71,37 @@ export default function ViewShedule() {
                                 <td>{bk.EndPoint}</td>
                                 <td>{bk.StartUpTime}</td>
                                 <td>{bk.TrainType}</td>
+
+                                <td>
+
+
+                                <Link
+
+                               to={`/getone/${bk._id} `}
+
+                               class="top-bar-link"
+
+>
+
+                              <button
+
+                               class="btn btn-pill btn-success btn-sm"
+
+                              style={{ marginLeft: 10, width: 60 }}
+
+                              >
+
+                               Edit
+
+                            </button>
+
+                            </Link>
+
+
+
+
+
+                                </td>
 
                             
                             </tr>

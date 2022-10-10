@@ -14,7 +14,7 @@ import Register from './components/Register';
 import EditTrainDetails from './components/EditTrainDetails';
 import EditNotice from './components/EditNotice';
 import NoticeReport from './components/NoticeReport';
-import EmployeeForm from './components/EmployeeForm';
+
 import EmpApplication from './components/EmpApplication';
 import TrainDetilsAdminView from './components/TrainDetilsAdminView';
 import PublishJob from './components/PublishJob';
@@ -31,6 +31,9 @@ import UserProfileView from './components/UserProfileView';
 import ViewShedule from './components/ViewShedule';
 
 import AddJob from './components/AddJob';
+import JobVacancy from './components/JobVacancy';
+
+import GetOneShedule from './components/GetOneShedule';
 
 
 
@@ -72,9 +75,8 @@ function App() {
 
 
 
-       <Route path="/employeeForm" element ={<EmployeeForm/>} />
-
-       <Route path= '/empApplication' element ={<EmpApplication/>} />
+      
+       
 
 
 
@@ -115,7 +117,18 @@ function App() {
 
        <Route path= '/addjob' element ={<AddJob/>} />
 
+       <Route path= '/vacancy' element ={<JobVacancy/>} />
 
+       <Route path= '/empApplication' element ={<EmpApplication/>} />
+
+       <Route path= '/viewemployee' element ={<EmployeeDetailsList/>} />
+       
+
+    //train shedule 
+
+    <Route path= '/getone' element ={<GetOneShedule/>} />
+
+    <Route path= '/getone/:id' element ={<GetOneShedule/>} />
 
 
 

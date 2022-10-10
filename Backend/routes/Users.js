@@ -78,4 +78,32 @@ router.delete('/users/delete/:id',(req,res) =>{
 });
 
 
+// fetch one 
+
+router.get('/users/:id' , async(req,res)=>{
+
+    let userId = req.params.id;
+
+    const users = await Users.findById(userId).then((users) => {
+
+
+
+        res.status(200).send({status:"user fetched",users})
+
+    }).catch((err)=> {
+
+        console.log(err.message );
+
+        res.status(500).send({status:"error with get user", error: err.message})
+
+
+
+    })
+
+})
+
+
 module.exports = router;
+
+
+
