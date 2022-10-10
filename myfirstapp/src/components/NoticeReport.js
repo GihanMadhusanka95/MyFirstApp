@@ -41,7 +41,7 @@ export default function NoticeReport() {
            
         <div className="l2"> 
         
-        <h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dolore molestiae  </h4>
+        <h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dolore   </h4>
         
         </div>
         
