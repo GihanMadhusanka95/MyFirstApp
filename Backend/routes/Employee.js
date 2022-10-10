@@ -9,10 +9,36 @@ router.post('/Employee/save',(req,res)=>{
 
     let newEmployee = new Employee(req.body);
 
+    newEmployee.save((err)=>{
+
+        if(err){
+            return res.status(400).json({
+                error:err
+            });
+        }
+        return res.status(200).json({
+            success:"Employee saved Successfully"
+        });
+    });
+});
 
 // get Employee
 
+router.get('/Employee',(req,res)=>{
+    Employee.find().exec((err,Employee) =>{
+        if(err){
+            return res.status(400).json({
+              error:err
+            });
+        }
+            
+        return res.status(200).json({
+            sucuss:true,
+            existingEmployee:Employee
+        });
 
+       });
+});
 
 // update
 
