@@ -87,7 +87,7 @@ router.delete('/Employee/delete/:id',(req,res) =>{
         });
 
         return res.json({
-            message:"Deleted Succesfull",deleteEmployee
+            message:"Delete Succesfull",deleteEmployee
         });
     });
 });
