@@ -12,21 +12,7 @@ router.post('/Employee/save',(req,res)=>{
 
 // get Employee
 
-router.get('/Employee',(req,res)=>{
-    Employee.find().exec((err,Employee) =>{
-        if(err){
-            return res.status(400).json({
-              error:err
-            });
-        }
-            
-        return res.status(200).json({
-            sucuss:true,
-            existingEmployee:Employee
-        });
 
-       });
-});
 
 // update
 
