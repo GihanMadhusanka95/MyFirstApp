@@ -27,6 +27,7 @@ export default function EditNotice() {
     <br />
     <br />
     <br />
+    <br />
 
 
 <label for="notice">Notice:</label>  <br /> <textarea name="" id="" cols="60" rows="10"></textarea>
