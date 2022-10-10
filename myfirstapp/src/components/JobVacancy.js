@@ -33,11 +33,9 @@ export default function JobVacancy() {
 
    })
 
-   document.getElementById('btn-1').addEventListener('click',testing);
+   
 
-   const testing =  (() =>{
-    alert("hello")
-   });
+  
 
    
 

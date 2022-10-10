@@ -11,7 +11,7 @@ export default function GetOneShedule() {
     
 
 
-	const [employeeData, setEmployeeData] = useState({TrainName: '' , Day:'' , StartPoint: '', EndPoint:'', StartUpTime: '' , TrainType: ''  });
+	const [employeeData, setEmployeeData] = useState({ });
 
 	useEffect(() => {
 		axios.get(`http://localhost:8000/trainDetails/`+id).then((res) => {
