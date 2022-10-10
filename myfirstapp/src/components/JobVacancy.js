@@ -2,16 +2,17 @@ import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import axios from'axios'
 import Header from './Header';
+import Footer from './Footer';
 
 
-export default function EmployeeDetailsList() {
+export default function JobVacancy() {
 
-    const[Edetails,setEdetails] = useState([]);
+    const[Ndetails,setNdetails] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/Employee`).then(res=> {
-            setEdetails(res.data.existingEmployee);
-            console.log(res.data.existingEmployee);
+        axios.get(`http://localhost:8000/Job`).then(res=> {
+            setNdetails(res.data.existingJob);
+            console.log(res.data.existingJob);
          
 
         })
@@ -23,7 +24,7 @@ export default function EmployeeDetailsList() {
    const deleteMyEmployee =((id)=>{
 
 
-   axios.delete(`http://localhost:8000/Employee/delete/${id}`).then((res)=>{
+   axios.delete(`http://localhost:8000/Job/delete/${id}`).then((res)=>{
    alert("delete succesfull")
    });
   
@@ -32,14 +33,18 @@ export default function EmployeeDetailsList() {
 
    })
 
+   document.getElementById('btn-1').addEventListener('click',testing);
+
+   const testing =  (() =>{
+    alert("hello")
+   });
+
    
 
   return (
     <div>
-
-     <div>
-      <Header/>
-     </div>
+     
+      <div> < Header/></div>
 
         <br />
             <br/>
@@ -49,29 +54,23 @@ export default function EmployeeDetailsList() {
                     <table className="table">
                         <thead className="thead-dark">
                             <tr>
-                                 <th scope="col">Name</th>
-                                <th scope="col">Position</th>
-                                <th scope="col">DateOfBirth</th>
-                                <th scope="col">ContactNumber</th>
-                                <th scope="col">Email</th>
-                                <th scope="col"> Address</th>
+                                 <th scope="col">Job Title</th>
+                                <th scope="col">Discription</th>
+                               
                             </tr>
                         </thead>
                         <tbody>
                             {
-                          Edetails.map ( (bk) => { 
+                          Ndetails.map ( (bk) => { 
                              return <tr>
 
 
-                                <td>{bk.Name}</td>
-                                <td>{bk.Position}</td> 
-                                <td>{bk.DateOfBirth}</td>
-                                <td>{bk.ContactNumber}</td>
-                                <td>{bk.Email}</td>
-                                <td>{bk.Address}</td>
+                                <td>{bk.JobTitle}</td>
+                                <td>{bk.Discription}</td> 
+                             
 
                                 <td class="table-action">
-                              <button
+                              {/* <button
                                 class="btn btn-pill btn-danger btn-sm"
                                 style={{ marginLeft: 45, width: 60 }}
                                 onClick={() =>{ deleteMyEmployee(bk._id)
@@ -93,7 +92,9 @@ export default function EmployeeDetailsList() {
                                 >
                                   Edit
                                 </button>
-                              </Link>
+                              </Link> */}
+
+                              <Link to = "/empApplication"> <button id='btn-1'> Apply </button> </Link>
                             
                             </td>
 
@@ -113,6 +114,8 @@ export default function EmployeeDetailsList() {
 
                 </div>
             </div>
+
+            <div>  <Footer/> </div>
     </div>
   )
 }

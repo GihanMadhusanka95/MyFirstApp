@@ -52,7 +52,7 @@ export default function AdminPannel() {
            <br />
            <br />
 
-           <button type="button" class="btn btn-secondary btn-lg mt"> <Link to = "/employeeManage" className='tt'> Employee Management </Link> </button>
+           <button type="button" class="btn btn-secondary btn-lg mt"> <Link to = "/viewemployee" className='tt'> Employee Management </Link> </button>
 
            <br />
            <br />

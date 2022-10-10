@@ -42,22 +42,22 @@ router.get('/TrainDetails',(req,res)=>{
        });
 });
 
-router.get('/getSelectedTrainDetails',(req,res)=>{
-    const id = req.params.id;
-    TrainDetails.findById(id).exec((err,TrainDetails) =>{
-        if(err){
-            return res.status(400).json({
-              error:err
-            });
-        }
+// router.get('/getSelectedTrainDetails',(req,res)=>{
+//     const id = req.params.id;
+//     TrainDetails.findById(id).exec((err,TrainDetails) =>{
+//         if(err){
+//             return res.status(400).json({
+//               error:err
+//             });
+//         }
             
-        return res.status(200).json({
-            sucuss:true,
-            existingTrainDetails:TrainDetails
-        });
+//         return res.status(200).json({
+//             sucuss:true,
+//             existingTrainDetails:TrainDetails
+//         });
 
-       });
-});
+//        });
+// });
 
 // update
 
@@ -95,6 +95,34 @@ router.delete('/TrainDetails/delete/:id',(req,res) =>{
         });
     });
 });
+
+
+
+
+// fetch one 
+
+
+router.get('/TrainDetails/:id' , async(req,res)=>{
+
+    let userId = req.params.id;
+
+    const trainDetails = await TrainDetails.findById(userId).then((trainDetails) => {
+
+
+
+        res.status(200).send({status:"user fetched",trainDetails})
+
+    }).catch((err)=> {
+
+        console.log(err.message );
+
+        res.status(500).send({status:"error with get user", error: err.message})
+
+
+
+    })
+
+})
 
 
 module.exports = router;
