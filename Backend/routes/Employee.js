@@ -17,7 +17,7 @@ router.post('/Employee/save',(req,res)=>{
             });
         }
         return res.status(200).json({
-            success:"Employee saved Successfully"
+            success:"Employee saved Successfuy"
         });
     });
 });
