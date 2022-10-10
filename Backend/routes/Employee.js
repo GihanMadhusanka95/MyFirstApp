@@ -131,7 +131,7 @@ router.put('/Employee/update/:id',(req,res)=>{
             }
 
                   return res.status(200).json({
-                //success:"Update Succesfully"
+                success:"Update Succesfully"
             });
         }
     );
