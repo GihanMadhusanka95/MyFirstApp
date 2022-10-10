@@ -39,6 +39,7 @@ import UsersDetailsList from './components/UsersDetailsList'
 
 import Galery from './components/Galery';
 
+import SelectTicket from './components/SelectTicket';
 
 
 
@@ -101,7 +102,7 @@ function App() {
        <Route path= '/UserProfile' element ={<UserProfileView/>} />
 
 
-       // Home page Components 
+// Home page Components 
 
        // view Shedule 
        <Route path= '/Shedule' element ={<ViewShedule/>} />
@@ -111,7 +112,7 @@ function App() {
 
 
 
-       // Employee Components 
+// Employee Components 
 
        <Route path= '/addjob' element ={<AddJob/>} />
 
@@ -122,7 +123,7 @@ function App() {
        <Route path= '/viewemployee' element ={<EmployeeDetailsList/>} />
        
 
-    //train shedule 
+//train shedule 
 
     <Route path= '/getone' element ={<GetOneShedule/>} />
 
@@ -130,17 +131,21 @@ function App() {
 
 
 
-  //  Admin Manage Users 
+//  Admin Manage Users 
 
   <Route path= '/allusers' element ={<UsersDetailsList/>} />
 
 
 
-  // Galery 
+// Galery 
 
   <Route path= '/galery' element ={<Galery/>} />
 
 
+
+// Booking Process
+
+<Route path= '/selectTicket' element ={<SelectTicket/>} />
 
    </Routes>
           
