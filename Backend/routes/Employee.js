@@ -72,7 +72,7 @@ router.delete('/Employee/delete/:id',(req,res) =>{
         });
 
         return res.json({
-            
+            message:"Delete Succesfull",deleteEmployee
         });
     });
 });
