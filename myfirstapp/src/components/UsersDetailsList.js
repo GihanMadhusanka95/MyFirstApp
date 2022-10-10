@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import axios from'axios'
+import Header from './Header';
 
 
 export default function EmployeeDetailsList() {
@@ -8,9 +9,9 @@ export default function EmployeeDetailsList() {
     const[Edetails,setEdetails] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/Employee`).then(res=> {
-            setEdetails(res.data.existingEmployee);
-            console.log(res.data.existingEmployee);
+        axios.get(`http://localhost:8000/users`).then(res=> {
+            setEdetails(res.data.existingUsers);
+            console.log(res.data.existingUsers);
          
 
         })
@@ -22,7 +23,7 @@ export default function EmployeeDetailsList() {
    const deleteMyEmployee =((id)=>{
 
 
-   axios.delete(`http://localhost:8000/Employee/delete/${id}`).then((res)=>{
+   axios.delete(`http://localhost:8000/users/delete/${id}`).then((res)=>{
    alert("delete succesfull")
    });
   
@@ -35,6 +36,11 @@ export default function EmployeeDetailsList() {
 
   return (
     <div>
+
+      <div>
+        <Header/>
+      </div>
+
         <br />
             <br/>
             <div className="row">
@@ -44,11 +50,9 @@ export default function EmployeeDetailsList() {
                         <thead className="thead-dark">
                             <tr>
                                  <th scope="col">Name</th>
-                                <th scope="col">Position</th>
-                                <th scope="col">DateOfBirth</th>
-                                <th scope="col">ContactNumber</th>
+                                <th scope="col">Contact Number</th>
                                 <th scope="col">Email</th>
-                                <th scope="col"> Address</th>
+                              
                             </tr>
                         </thead>
                         <tbody>
@@ -58,11 +62,9 @@ export default function EmployeeDetailsList() {
 
 
                                 <td>{bk.Name}</td>
-                                <td>{bk.Position}</td> 
-                                <td>{bk.DateOfBirth}</td>
-                                <td>{bk.ContactNumber}</td>
+                                <td>{bk.ContactNumber}</td> 
                                 <td>{bk.Email}</td>
-                                <td>{bk.Address}</td>
+                               
 
                                 <td class="table-action">
                               <button

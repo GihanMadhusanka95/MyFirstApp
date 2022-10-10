@@ -57,7 +57,7 @@ export default function AdminPannel() {
            <br />
            <br />
 
-           <button type="button" class="btn btn-secondary btn-lg mt"> <Link to = "/bookings" className='tt'> Bookings </Link>  </button>
+           <button type="button" class="btn btn-secondary btn-lg mt"> <Link to = "/allusers" className='tt'> User Manage </Link>  </button>
 
            <br />
            <br />

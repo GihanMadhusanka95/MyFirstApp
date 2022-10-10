@@ -16,10 +16,10 @@ import EditNotice from './components/EditNotice';
 import NoticeReport from './components/NoticeReport';
 
 import EmpApplication from './components/EmpApplication';
-import TrainDetilsAdminView from './components/TrainDetilsAdminView';
+//import TrainDetilsAdminView from './components/TrainDetilsAdminView';
 import PublishJob from './components/PublishJob';
 import RecivedApplication from './components/RecivedApplication';
-import Calculate from './components/Calculate';
+//import Calculate from './components/Calculate';
 import TrainDetailsList from './components/TrainDetailsList';
 
 
@@ -34,6 +34,12 @@ import AddJob from './components/AddJob';
 import JobVacancy from './components/JobVacancy';
 
 import GetOneShedule from './components/GetOneShedule';
+
+import UsersDetailsList from './components/UsersDetailsList'
+
+import Galery from './components/Galery';
+
+
 
 
 
@@ -74,19 +80,11 @@ function App() {
 
 
 
-
-      
-       
-
-
-
-       <Route path= '/AdminTrain' element ={<TrainDetilsAdminView/>} />
-
        <Route path= '/PublishJob' element ={<PublishJob/>} />
 
        <Route path= '/recived' element ={<RecivedApplication/>} />
 
-       <Route path= '/test' element ={<Calculate/>} />
+      
 
        <Route path= '/viewtrain' element ={<TrainDetailsList/>} />
 
@@ -132,9 +130,15 @@ function App() {
 
 
 
+  //  Admin Manage Users 
+
+  <Route path= '/allusers' element ={<UsersDetailsList/>} />
 
 
 
+  // Galery 
+
+  <Route path= '/galery' element ={<Galery/>} />
 
 
 
