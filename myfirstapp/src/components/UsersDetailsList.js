@@ -80,7 +80,7 @@ export default function EmployeeDetailsList() {
                                 Delete
                               </button>
                               <Link
-                                to={"/TrainEdit/" + bk._id}
+                                to={"/userEdit/" + bk._id}
                                 class="top-bar-link"
                               >
                                 <button

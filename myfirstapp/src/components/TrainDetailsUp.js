@@ -5,7 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 
-export default function ViewShedule() {
+export default function TrainDetailsUp() {
 
     const[tdetails,setTdetails] = useState([]);
 
@@ -72,36 +72,32 @@ export default function ViewShedule() {
                                 <td>{bk.StartUpTime}</td>
                                 <td>{bk.TrainType}</td>
 
-                                <td>
-
-
-                                <Link
-
-                               to={`/getone/${bk._id} `}
-
-                               class="top-bar-link"
-
->
-
+                                <td class="table-action">
                               <button
-
-                               class="btn btn-pill btn-success btn-sm"
-
-                              style={{ marginLeft: 10, width: 60 }}
-
+                                class="btn btn-pill btn-danger btn-sm"
+                                style={{ marginLeft: 45, width: 60 }}
+                                onClick={() =>{ deleteMyEmployee(bk._id)
+                                    setTimeout(()=>{
+                                        window.location.reload(true);
+                                    },2050)
+                                
+                                }}
                               >
-
-                               View
-
-                            </button>
-
-                            </Link>
-
-
-
-
-
-                                </td>
+                                Delete
+                              </button>
+                              <Link
+                                to={"/TrainEdit/" + bk._id}
+                                class="top-bar-link"
+                              >
+                                <button
+                                  class="btn btn-pill btn-success btn-sm"
+                                  style={{ marginLeft: 10, width: 60 }}
+                                >
+                                  Edit
+                                </button>
+                              </Link>
+                            
+                            </td>
 
                             
                             </tr>

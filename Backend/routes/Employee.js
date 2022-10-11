@@ -42,7 +42,7 @@ router.get('/Employee',(req,res)=>{
 
 // update
 
-router.put('/Employee/update/:id',(req,res)=>{
+router.post('/Employee/update/:id',(req,res)=>{
 
     Employee.findByIdAndUpdate(
         req.params.id,
@@ -76,6 +76,28 @@ router.delete('/Employee/delete/:id',(req,res) =>{
         });
     });
 });
+
+router.get('/employees/:id' , async(req,res)=>{
+
+    let userId = req.params.id;
+
+    const employees = await Employee.findById(userId).then((users) => {
+
+
+
+        res.status(200).send({status:"Employee fetched",users})
+
+    }).catch((err)=> {
+
+        console.log(err.message );
+
+        res.status(500).send({status:"error with get user", error: err.message})
+
+
+
+    })
+
+})
 
 
 module.exports = router;

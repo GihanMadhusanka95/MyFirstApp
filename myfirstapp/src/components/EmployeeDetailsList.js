@@ -44,8 +44,8 @@ export default function EmployeeDetailsList() {
         <br />
             <br/>
             <div className="row">
-                <div className="col-md-3"></div>
-                <div className="col-md-8">
+                <div className="col-md-2"></div>
+                <div className="col-md-9">
                     <table className="table">
                         <thead className="thead-dark">
                             <tr>
@@ -84,7 +84,7 @@ export default function EmployeeDetailsList() {
                                 Delete
                               </button>
                               <Link
-                                to={"/TrainEdit/" + bk._id}
+                                to={"/employeeEdit/" + bk._id}
                                 class="top-bar-link"
                               >
                                 <button
