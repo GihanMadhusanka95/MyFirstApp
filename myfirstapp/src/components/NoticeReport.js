@@ -41,7 +41,7 @@ export default function NoticeReport() {
            
         <div className="l2"> 
         
-        <h4> We are going to make a full
+        <h4> We are going to make
              
               
         </h4>
