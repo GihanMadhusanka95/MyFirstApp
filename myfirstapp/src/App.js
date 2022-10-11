@@ -41,7 +41,10 @@ import Galery from './components/Galery';
 
 import SelectTicket from './components/SelectTicket';
 
+import UserEdit from './components/UserEdit';
+import EmployeeEdit from './components/EmployeeEdit'
 
+import TrainDetailsUp from './components/TrainDetailsUp';
 
 
 
@@ -146,6 +149,15 @@ function App() {
 // Booking Process
 
 <Route path= '/selectTicket' element ={<SelectTicket/>} />
+
+<Route path= '/userEdit/:id' element ={<UserEdit/>} />
+
+<Route path= '/employeeEdit/:id' element ={<EmployeeEdit/>} />
+
+<Route path= '/upTrain' element ={<TrainDetailsUp/>} />
+
+
+
 
    </Routes>
           

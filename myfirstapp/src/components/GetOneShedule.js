@@ -15,8 +15,8 @@ export default function GetOneShedule() {
 
 	useEffect(() => {
 		axios.get(`http://localhost:8000/trainDetails/`+id).then((res) => {
-            console.log(res.data);
-            setEmployeeData(res);
+            console.log(res.data.trainDetails);
+            setEmployeeData(res.data.trainDetails);
         })
 	  }, []);
 
@@ -45,7 +45,7 @@ export default function GetOneShedule() {
                                     
 									<div class="column" >
 									<center><Link
-												to={"/manageEmployee/"}
+												to={"/Shedule"}
 												class="top-bar-link"
 											>
 												<button
@@ -68,27 +68,27 @@ export default function GetOneShedule() {
                                                 <div class="col-md-8"><table class="table table-sm my-2 " >
 										<tbody>
 											<tr>
-												<th>Name</th>
+												<th>Train Name</th>
 												<td>{employeeData.TrainName}</td>
 											</tr>
 											<tr>
-												<th>Email</th>
+												<th>Day</th>
 												<td>{employeeData.Day}</td>
 											</tr>
 											<tr>
-												<th>Address</th>
+												<th>Start Point</th>
 												<td>{employeeData.StartPoint}</td>
 											</tr>
 											<tr>
-												<th>NIC</th>
+												<th>End Point</th>
 												<td>{employeeData.EndPoint}</td>
 											</tr>
 											<tr>
-												<th>Date of Birth</th>
+												<th>Startup Time</th>
 												<td>{employeeData.StartUpTime}</td>
 											</tr>
 											<tr>
-												<th>employee Total Salary</th>
+												<th>Train Type</th>
 												<td>{employeeData.TrainType}</td>
 											</tr>
 											

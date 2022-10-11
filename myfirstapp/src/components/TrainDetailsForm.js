@@ -4,6 +4,7 @@ import Footer from './Footer'
 import './css files/trainDforms.css'
 import { useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 export default function TrainDetailsForm() {
 
@@ -96,6 +97,11 @@ export default function TrainDetailsForm() {
 
 
     <button class="btn btn-primary  by" onClick={handleClick} > Add </button>
+
+
+   
+
+    <Link to="/upTrain">  <button class="btn btn-primary  by"  > View  </button> </Link>
 
      </form>
      
