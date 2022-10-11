@@ -41,7 +41,7 @@ export default function NoticeReport() {
            
         <div className="l2"> 
         
-        <h4> We are going to make a full functional web application for train ticket booking. We hope to make this application make things easier
+        <h4> We are going to make a full functional web application for train ticket booking. We hope to make this application
              
               
         </h4>
