@@ -41,7 +41,7 @@ export default function NoticeReport() {
            
         <div className="l2"> 
         
-        <h4> notice is create on web page to</h4>
+        <h4> notice </h4>
         
         </div>
         
