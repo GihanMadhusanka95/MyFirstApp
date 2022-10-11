@@ -39,6 +39,20 @@ export default function EditTrainDetails() {
      <button type="button" class="btn btn-primary bk">Update</button>  
      <button type="button" class="btn btn-primary bk">Delete</button>
 
+// ggh
+
+//hhj
+ //rjiulrthieuhteiluthieutheiutherithueityriuhyie5t;pprgjyp99tunrpyuryentube5nubteyneru5bye5bbyrtyrurtrttuyrt
+
+
+
+    
+
+
+
+
+    
+
      </form>
      
     <div className='fu'> 
