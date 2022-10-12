@@ -15,6 +15,58 @@ export default function Footer() {
          <span className='fe'> Payment Method</span> <br />
          <div className="row">
           <div className="col-4"> <img className='imagehandle' src="./images/creditcard.png" alt="image" /></div>
+
+          <div className="row">
+
+             <div className='col-4'>
+                   
+                   <div className='card'>
+                     
+                      <div className='card-body'>
+                     
+                    
+
+                      </div>
+
+                   </div>
+
+             </div>
+
+             <div className='col-4'>
+                
+             <div className='card'>
+                     
+                     <div className='card-body'>
+                    
+
+                       
+                     </div>
+
+                  </div>
+              
+             </div>
+
+             <div className='col-4'>
+                     
+             <div className='card'>
+                     
+                     <div className='card-body'>
+                      
+
+                       
+                     </div>
+
+                  </div>
+                
+             </div>
+
+
+
+          </div>
+
+
+
+
           <div className="col-4"></div>
           <div className="col-4"></div>
           
