@@ -31,6 +31,28 @@ export default function ViewShedule() {
 
    })
 
+   const onBook = async () => {
+
+
+    alert("Booking Added Succesfully");
+   
+    // e.preventDefault();
+    let obj = tdetails;
+    obj.customerName = null;
+    obj.customerId = null;
+    obj.date = new Date().toISOString().substring(0,10);
+    obj.time = new Date().getTime();
+   try{
+
+      const resp = await axios.post('http://localhost:8000/MyTrainDetails/save', obj);
+
+      console.log(resp.data);
+
+   } catch(error) {
+     console.log(error.response);
+   }
+   }
+
 //    const buttonClick = (id) => {
 
 //    }
@@ -96,6 +118,20 @@ export default function ViewShedule() {
                             </button>
 
                             </Link>
+
+                            <button
+
+                               class="btn btn-pill btn-success btn-sm"
+
+                              style={{ marginLeft: 10, width: 60 }}
+
+                              onClick={onBook}
+
+                              >
+
+                               Book
+
+                            </button>
 
 
 

@@ -7,7 +7,8 @@ const router = express.Router();
 
 router.post('/Notice/save',(req,res)=>{
 
-    let newNotice = new Notice(req.body);
+    console.log(req.body);
+    let newNotice = new Notice({Date: req.body.date, Notice: req.body.Notice});
 
     newNotice.save((err)=>{
 
@@ -42,7 +43,7 @@ router.get('/Notice',(req,res)=>{
 
 // update
 
-router.put('/Notice/update/:id',(req,res)=>{
+router.post('/Notice/update/:id',(req,res)=>{
 
     Notice.findByIdAndUpdate(
         req.params.id,
@@ -76,6 +77,28 @@ router.delete('/Notice/delete/:id',(req,res) =>{
         });
     });
 });
+
+router.get('/Notice/:id' , async(req,res)=>{
+
+    let userId = req.params.id;
+
+    const trainDetails = await Notice.findById(userId).then((trainDetails) => {
+
+
+
+        res.status(200).send({status:"user fetched",trainDetails})
+
+    }).catch((err)=> {
+
+        console.log(err.message );
+
+        res.status(500).send({status:"error with get user", error: err.message})
+
+
+
+    })
+
+})
 
 
 module.exports = router;

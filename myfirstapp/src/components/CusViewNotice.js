@@ -133,7 +133,7 @@ export default function CusViewNotice() {
 
 <div className='row'>   
 
-<div className='col-2'>  
+<div className='col-1'>  
  
 <ul class="list-group">
 
@@ -147,11 +147,11 @@ export default function CusViewNotice() {
 </div>
 
 
-<div className='col-9'>
+<div className='col-11  '>
 
 <div className="row">
-                <div className="col-md-3"></div>
-                <div className="col-md-8">
+                {/* <div className="col-md-1"></div> */}
+                <div className="col-md-12">
 
 
                     <table className=" table table-striped ">
@@ -159,6 +159,7 @@ export default function CusViewNotice() {
                             <tr>
                                  <th scope="col">Date</th>
                                 <th scope="col">Notice</th>
+                                <th scope="col-6">Action</th>
                                
                             </tr>
                         </thead>
@@ -172,7 +173,41 @@ export default function CusViewNotice() {
 
                                 <td><h5> {bk.Date} </h5></td>
                                 <td> <h5> {bk.Notice} </h5></td> 
-                             
+                                <td>
+                                <Link
+
+                               to={`/editNotice/${bk._id} `}
+
+                               class="top-bar-link">
+
+                              <button
+
+                               class="btn btn-pill btn-success btn-sm"
+
+                              style={{ marginLeft: 10, width: 60 }}
+
+                              >
+
+                               Edit
+
+                            </button>
+
+                            </Link>
+
+
+                            <button
+
+                            class="btn btn-pill btn-danger btn-sm"
+                            style={{ marginLeft: 45, width: 60 }}
+                            onClick={() =>{ deleteMyEmployee(bk._id)
+                                setTimeout(()=>{
+                                    window.location.reload(true);
+                                },2050)
+
+                            }}
+
+                              >Delete</button>
+                            </td>
 
                             
                             </tr>
