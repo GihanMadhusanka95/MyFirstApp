@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const NoticeSchema =  new mongoose.Schema({
 
      Date:{
-        type:Date,
+        type:String,
         required:true
      },
 

@@ -8,18 +8,20 @@ import axios from 'axios'
 
 export default function CreateNotice() {
 
-const [Date,setDate] = useState('');
+const [date,setDate] = useState('');
 const [Notice,setNotice] = useState('');
 
 
 const handleClick = async (e) => {
+
+   console.log(date)
 
    alert("Notice Added Succesfully");
    
     e.preventDefault();
    try{
 
-      const resp = await axios.post('http://localhost:8000/Notice/save',{Date:Date,Notice:Notice});
+      const resp = await axios.post('http://localhost:8000/Notice/save',{date:date,Notice:Notice});
 
       console.log(resp.data);
 
@@ -50,7 +52,7 @@ const handleClick = async (e) => {
 <label for="date">Date:</label>  <br />
           <input type="date"
            id='Date'
-           value={Date}
+           value={date}
            onChange = {(e) =>setDate(e.target.value)} />
    
     <br />
@@ -61,10 +63,14 @@ const handleClick = async (e) => {
 
 
 <label for="date">Notice:</label>  <br />
-          <input type="text"
+          {/* <input type="text"
            id='Notice'
            value={Notice}
-           onChange = {(e) =>setNotice(e.target.value)} />
+           onChange = {(e) =>setNotice(e.target.value)} /> */}
+<br />
+<textarea name="" id="" cols="60" rows="10"
+value={Notice}
+onChange = {(e) =>setNotice(e.target.value)}></textarea>
 <br />
 
       <button class="btn btn-primary  by" onClick={handleClick} > Add </button>

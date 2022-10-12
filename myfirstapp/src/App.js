@@ -46,6 +46,8 @@ import EmployeeEdit from './components/EmployeeEdit'
 
 import TrainDetailsUp from './components/TrainDetailsUp';
 
+import ContactUs from './components/ContactUs';
+
 
 
 
@@ -78,7 +80,7 @@ function App() {
 
        <Route path="/editTrainDetails" element ={<EditTrainDetails/>} />
 
-       <Route path="/editNotice" element ={<EditNotice/>} />
+       <Route path="/editNotice/:id" element ={<EditNotice/>} />
 
        <Route path="/noticeReport" element ={<NoticeReport/>} />
 
@@ -155,6 +157,8 @@ function App() {
 <Route path= '/employeeEdit/:id' element ={<EmployeeEdit/>} />
 
 <Route path= '/upTrain' element ={<TrainDetailsUp/>} />
+
+<Route path= '/contactus' element ={<ContactUs/>} />
 
 
 
