@@ -43,7 +43,7 @@ export default function NoticeReport() {
         
         <h4> We are going to make a full functional web application for train ticket booking. We hope to make this application make things easier for the customer. 
          There are 4 main functions in this app, they are bookings management, customer management, employee management, and notice and feedback management. 
-         We hope to use MERN STACK to develop our project
+         
              
               
         </h4>
