@@ -3,6 +3,7 @@ import './css files/color.css'
 
 
 
+
 export default function Footer() {
   return (
     <> 
@@ -15,7 +16,8 @@ export default function Footer() {
          <span className='fe'> No 63/1 ,  T.B jayah Mawatha colombo </span> <br />
          <span className='fe'> Payment Method</span> <br />
          <div className="row">
-          <div className="col-4"> <img className='imagehandle' src="./images/creditcard.png" alt="image" /></div>
+          <div className="col-4"> <img className='imagehandle' src="./images/Visa.svg" alt="visa card" />
+          <img className='imagehandle' src="./images/American Express.svg" alt="american express card" /></div>
           <div className="col-4"></div>
           <div className="col-4"></div>
           
