@@ -8,6 +8,9 @@ import { useState } from 'react'
 import axios from 'axios'
 
 
+import swal from 'sweetalert';
+
+
 export default function Register() {
 
 const [Name,setName] = useState('');

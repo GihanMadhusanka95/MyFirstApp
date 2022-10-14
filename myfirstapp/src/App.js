@@ -48,6 +48,8 @@ import TrainDetailsUp from './components/TrainDetailsUp';
 
 import ContactUs from './components/ContactUs';
 
+import CheckValidation from './components/CheckValidation';
+
 
 
 
@@ -161,7 +163,9 @@ function App() {
 <Route path= '/contactus' element ={<ContactUs/>} />
 
 
+// validation check 
 
+<Route path= '/val' element ={<CheckValidation/>} />
 
    </Routes>
           
