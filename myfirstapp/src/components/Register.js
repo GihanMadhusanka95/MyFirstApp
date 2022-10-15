@@ -6,6 +6,7 @@ import Header from './Header'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
+import swal from 'sweetalert'
 
 
 export default function Register() {
@@ -15,19 +16,57 @@ const [ContactNumber,setContactNumber] = useState('');
 const [Email,setEmail] = useState('');
 const [Password,setPassword] = useState('');
 
-const handleClick = async (e) => {
+console.log(Name);
        
-   alert("User Registerd Succesfully");
-   e.preventDefault();
-   try{
 
-      const resp = await axios.post('http://localhost:8000/users/save',{Name:Name,ContactNumber:ContactNumber,Email:Email,Password:Password});
+function handleClick() {
 
-      console.log(resp.data);
-
-   } catch(error) {
-console.log(error.response);
+   const newUser = {
+      Name,
+      ContactNumber,
+      Email,
+      Password
    }
+   if (Name ==='' && ContactNumber ==='' && Email === '' && Password === '' ){
+      swal('Error')
+   }else if(Name ==='') {
+      swal('Name cant be empty')
+   }
+   else if(ContactNumber ==='') {
+      swal('Contact Number cant be empty')
+   }
+   else if(Email ==='') {
+      swal('Email cant be empty')
+   }
+   else if(Password ==='') {
+      swal('Password cant be empty')
+   }
+
+
+
+
+   axios.post('http://localhost:8000/users/save',newUser).then(()=>{
+      swal({
+         title: "Success",
+         text: "New User Added",
+         icon:'success',
+         timer:2000,
+         button:false
+      });
+   }).catch((e)=>{
+      alert(e)
+   })
+//    alert("User Registerd Succesfully");
+//    e.preventDefault();
+//    try{
+
+//       axios.post('http://localhost:8000/users/save',{Name:Name,ContactNumber:ContactNumber,Email:Email,Password:Password});
+
+//       console.log(resp.data);
+
+//    } catch(error) {
+// console.log(error.response);
+//    }
 };
 
 
@@ -98,7 +137,7 @@ return (
                       <br />
 
                      
-                   <button class="btn btn-success" onClick={handleClick}> Submit </button>
+                   <button class="btn btn-success" type='button' onClick={handleClick}> Submit </button>
                      
 
                       <br />
