@@ -4,6 +4,7 @@ import Header from './Header'
 import './css files/EmployeeApplication.css'
 import { useState } from 'react'
 import axios from 'axios'
+import swal from 'sweetalert'
 
 export default function EmpApplication() {
 
@@ -14,29 +15,58 @@ const [ContactNumber,setContactNumber] = useState('');
 const [Email,setEmail] = useState('');
 const [Address,setAddress] = useState('');
 
-const handleClick = async (e) => {
 
-  alert("Employee Added Succesfully");
-   
-    e.preventDefault();
-   try{
 
-      const resp = await axios.post('http://localhost:8000/Employee/save',{
-        Name:Name,
-        Position:Position,
-        DateOfBirth:DateOfBirth,
-        ContactNumber:ContactNumber,
-        Email:Email,
-        Address:Address
+function handleClick() {
 
-      });
+  const newEmployee = {
+    Name,
+    Position,
+    DateOfBirth,
+    ContactNumber,
+    Email,
+    Address
 
-      console.log(resp.data);
 
-   } catch(error) {
-    console.log(error.response);
-   }
+  }
+  if (Name ==='' && Position ==='' && DateOfBirth === '' && ContactNumber === ''&&Email === '' &&Address === '' ){
+     swal('Error')
+  }else if(Name ==='') {
+     swal('Name cant be empty')
+  }
+  else if(Position ==='') {
+     swal('position is required')
+  }
+  else if(DateOfBirth ==='') {
+     swal('Date of birth cant be empty')
+  }
+  else if(ContactNumber ==='') {
+     swal('Contact number is required')
+  }
+  else if(Email ==='') {
+    swal('Email is required')
+ }
+ else if(Address ==='') {
+  swal('Address is required')
+}
+
+
+
+
+  axios.post('http://localhost:8000/Employee/save',newEmployee).then(()=>{
+     swal({
+        title: "Success",
+        text: "New Employee Registerd",
+        icon:'success',
+        timer:2000,
+        button:false
+     });
+  }).catch((e)=>{
+     // alert(e)
+  })
+
 };
+
 
 return (
       <>
@@ -88,7 +118,7 @@ return (
                 value={Address}
                 onChange = {(e) =>setAddress(e.target.value)}/>   <br />
 
-              <button class="btn btn-success" onClick={handleClick}> Submit </button>
+              <button class="btn btn-success" type='button' onClick={handleClick}> Submit </button>
 
 
 

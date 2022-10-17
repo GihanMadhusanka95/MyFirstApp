@@ -5,6 +5,7 @@ import './css files/trainDforms.css'
 import { useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert'
 
 export default function TrainDetailsForm() {
 
@@ -15,28 +16,67 @@ export default function TrainDetailsForm() {
   const [StartUpTime,setStartUpTime] = useState('');
   const [TrainType,setTrainType] = useState('');
   
-  const handleClick = async (e) => {
 
-   alert("Train Details Succesfully");
-     
-      e.preventDefault();
-     try{
-  
-        const resp = await axios.post('http://localhost:8000/TrainDetails/save',{
-        TrainName:TrainName,
-        Day:Day,
-        StartPoint:StartPoint,
-        EndPoint:EndPoint,
-        StartUpTime:StartUpTime,
-        TrainType:TrainType
-    });
-  
-        console.log(resp.data);
-  
-     } catch(error) {
-  console.log(error.response);
-     }
-  };
+function handleClick() {
+
+   const newTrain = {
+      TrainName,
+      Day,
+      StartPoint,
+      EndPoint,
+      StartUpTime,
+      TrainType
+
+   }
+   if (TrainName ==='' && Day ==='' && StartPoint === '' && EndPoint === ''&& StartUpTime === '' &&TrainType === '' ){
+      swal('Error')                               
+   }else if( TrainName ==='') {
+      swal('Name cant be empty')
+   }
+   else if(Day ==='') {
+      swal('Day is required')
+   }
+   else if(StartPoint ==='') {
+      swal('Day is required')
+   }
+   else if(EndPoint ==='') {
+      swal('Day is required')
+   }
+   else if(StartUpTime ==='') {
+      swal('Day is required')
+   }
+   else if(TrainType ==='') {
+      swal('Day is required')
+   }
+
+
+
+
+   axios.post('http://localhost:8000/TrainDetails/save',newTrain).then(()=>{
+      swal({
+         title: "Success",
+         text: "New User Added",
+         icon:'success',
+         timer:2000,
+         button:false
+      });
+   }).catch((e)=>{
+      // alert(e)
+   })
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -96,7 +136,7 @@ export default function TrainDetailsForm() {
      onChange = {(e) =>setStartUpTime(e.target.value)}/>  <br />
 
 
-    <button class="btn btn-primary  by" onClick={handleClick} > Add </button>
+    <button class="btn btn-primary  by"  type='button' onClick={handleClick} > Add </button>
 
 
    

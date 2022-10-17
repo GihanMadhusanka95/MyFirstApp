@@ -54,19 +54,9 @@ function handleClick() {
          button:false
       });
    }).catch((e)=>{
-      alert(e)
+      // alert(e)
    })
-//    alert("User Registerd Succesfully");
-//    e.preventDefault();
-//    try{
 
-//       axios.post('http://localhost:8000/users/save',{Name:Name,ContactNumber:ContactNumber,Email:Email,Password:Password});
-
-//       console.log(resp.data);
-
-//    } catch(error) {
-// console.log(error.response);
-//    }
 };
 
 

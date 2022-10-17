@@ -4,9 +4,46 @@ import './css files/Login.css'
 import Footer from './Footer'
 import Header from './Header'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import swal from 'sweetalert'
 
 
 export default function Login() {
+
+
+const [Email,setEmail] = useState('');
+const [Password,setPassword] = useState('');
+
+const PassData = {Email,Password};
+
+
+
+
+
+function handleClick() {
+
+console.log(Email);
+console.log(Password);
+
+if (Email ==='' && Password ==='' ){
+  swal('Please Login ')
+}else if(Email ==='') {
+  swal('Email is required')
+}
+else if(Password ==='') {
+  swal('Password is required')
+}
+if (Email == "chamodbandara78@gmail.com" && Password == "bino123"){
+  swal('User Login Success')
+}
+
+
+
+
+
+ }
+
+
   return (
       <>
          <div>
@@ -33,18 +70,31 @@ export default function Login() {
                     <form action="">
 
                       <label className='jj'> Email  </label>
-                      <input className='ip form-control bn' type="text" /> 
+                      <input className='ip form-control bn' 
+                       type="text"
+                       id='Email'
+                       value={Email}
+                       onChange = {(e) =>setEmail(e.target.value)} /> 
 
                       <br />
 
                       <label className='jj'> Password </label>
-                      <input className='ip form-control bn ' type="text" />
 
-                      <input className='hh' type="submit" />
+                      <input className='ip form-control bn ' type="text"
+            
+                      id='Password'
+                      value={Password}
+                      onChange = {(e) =>setPassword(e.target.value)} />
+
+                      <br /> <br />
+
+                      <button class="btn btn-success" type='button' onClick={handleClick}> Submit </button>
 
                       <br />
 
                       <h5> Don't have an eccount ?  <Link to = "/register"> Register </Link> </h5>
+
+                      
 
                       
 
