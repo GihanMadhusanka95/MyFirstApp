@@ -56,6 +56,10 @@ import MyPayment from './components/MyPayment';
 
 import AboutUs from './components/AboutUs';
 
+import AddImage from './components/AddImage';
+
+import EditImage from './components/EditImage';
+
 
 
 
@@ -174,6 +178,12 @@ function App() {
 <Route path= '/Payment' element ={<MyPayment/>} />
 
 <Route path= '/us' element ={<AboutUs/>} />
+
+<Route path= '/AI' element ={<AddImage/>} />
+
+<Route path= '/EI' element ={<EditImage/>} />
+
+
 
 
 // validation check 
