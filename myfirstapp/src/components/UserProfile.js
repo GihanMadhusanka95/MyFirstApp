@@ -27,9 +27,9 @@ export default function UserProfile() {
 
           <Link to = "" > <button className='btn btn-primary btn-lg  ggh'>  My Cansalations </button></Link>
 
-          <Link to = "" > <button className='btn btn-primary btn-lg  ggh'> My Payment Option </button></Link>
+          <Link to = "/Payment" > <button className='btn btn-primary btn-lg  ggh'> My Payment Option </button></Link>
 
-          <Link to = "" > <button className='btn btn-primary btn-lg  ggh'> Add Feedback </button></Link>
+          <Link to = "/ViewFeed" > <button className='btn btn-primary btn-lg  ggh'> Add Feedback </button></Link>
           
 
 

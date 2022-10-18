@@ -20,6 +20,8 @@ const JobRoutes = require('./routes/Job')
 
 const MyTrainDetailsRoutes = require('./routes/MyTrainDetails')
 
+const FeedbackRoutes = require('./routes/Feedback')
+
 app.use(bodyparser.json());
 app.use(cors());
 
@@ -33,6 +35,7 @@ app.use(NoticeRoutes);
 app.use(EmployeeRoutes);
 app.use(JobRoutes);
 app.use(MyTrainDetailsRoutes);
+app.use(FeedbackRoutes);
 
 
 

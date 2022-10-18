@@ -50,6 +50,13 @@ import ContactUs from './components/ContactUs';
 
 import CheckValidation from './components/CheckValidation';
 
+import AddFeedback from './components/AddFeedback';
+
+import MyPayment from './components/MyPayment';
+
+import AboutUs from './components/AboutUs';
+
+
 
 
 
@@ -161,6 +168,12 @@ function App() {
 <Route path= '/upTrain' element ={<TrainDetailsUp/>} />
 
 <Route path= '/contactus' element ={<ContactUs/>} />
+
+<Route path= '/ViewFeed' element ={<AddFeedback/>} />
+
+<Route path= '/Payment' element ={<MyPayment/>} />
+
+<Route path= '/us' element ={<AboutUs/>} />
 
 
 // validation check 
