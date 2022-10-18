@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import swal from 'sweetalert'
+import { Link } from 'react-router-dom';
 
 export default function AddImage() {
 
@@ -19,7 +20,7 @@ export default function AddImage() {
             swal('Error')
          }
 
-         
+
       
     }
 
@@ -73,7 +74,7 @@ export default function AddImage() {
         </div>
        </div>
 
-
+ 
 
 </div>
 
