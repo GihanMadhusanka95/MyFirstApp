@@ -18,6 +18,7 @@ const [Password,setPassword] = useState('');
 
 console.log(Name);
        
+  const number = 10;
 
 function handleClick() {
 
@@ -28,7 +29,7 @@ function handleClick() {
       Password
    }
    if (Name ==='' && ContactNumber ==='' && Email === '' && Password === '' ){
-      swal('Error')
+      swal('User Not Registerd')
    }else if(Name ==='') {
       swal('Name cant be empty')
    }
@@ -41,6 +42,7 @@ function handleClick() {
    else if(Password ==='') {
       swal('Password cant be empty')
    }
+  
 
 
 

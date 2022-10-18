@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer'
 import Header from './Header'
 
 export default function Contact() {
@@ -77,7 +78,9 @@ export default function Contact() {
 
 
 
-
+   <div>
+    <Footer/>
+   </div>
 
 
     </div>
