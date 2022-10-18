@@ -6,12 +6,12 @@ import Footer from './Footer';
 import swal from 'sweetalert'
 
 
-export default function ViewShedule() {
+export default function ViewBookings() {
 
     const[tdetails,setTdetails] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/TrainDetails`).then(res=> {
+        axios.get(`http://localhost:8000/MyBooking`).then(res=> {
             setTdetails(res.data.existingTrainDetails);
             console.log(res.data.existingTrainDetails)
          
@@ -113,6 +113,8 @@ export default function ViewShedule() {
                                 <th scope="col">EndPoint</th>
                                 <th scope="col">StartUpTime</th>
                                 <th scope="col"> TrainType</th>
+                                <th scope="col">Time</th>
+                                <th scope="col"> Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -127,13 +129,15 @@ export default function ViewShedule() {
                                 <td>{bk.EndPoint}</td>
                                 <td>{bk.StartUpTime}</td>
                                 <td>{bk.TrainType}</td>
+                                <td>{bk.time}</td>
+                                <td>{bk.date}</td>
 
                                 <td>
 
 
                                 <Link
 
-                               to={`/getone/${bk._id} `}
+                               to={`/getBooking/${bk._id} `}
 
                                class="top-bar-link"
 
@@ -152,24 +156,6 @@ export default function ViewShedule() {
                             </button>
 
                             </Link>
-
-                            <button
-
-                               class="btn btn-pill btn-success btn-sm"
-
-                              style={{ marginLeft: 10, width: 60 }}
-
-                              onClick={handleClick.bind(this, bk.TrainName, bk.Day, bk.StartPoint,bk.EndPoint, bk.StartUpTime, bk.TrainType )}
-
-                              >
-
-                               Book
-
-                            </button>
-
-
-
-
 
                                 </td>
 

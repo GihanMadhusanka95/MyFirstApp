@@ -70,6 +70,10 @@ import ANoticeReport from './components/ANoticeReport';
 
 import AEmployee from './components/AEmployee';
 
+import MyBookings from './components/ViewBookings';
+
+import ViewOneBooking from './components/ViewOneBooking'
+
 
 
 
@@ -158,6 +162,8 @@ function App() {
 
     <Route path= '/getone/:id' element ={<GetOneShedule/>} />
 
+    <Route path= '/getBooking/:id' element ={<ViewOneBooking/>} />
+
 
 
 //  Admin Manage Users 
@@ -201,6 +207,8 @@ function App() {
 // validation check 
 
 <Route path= '/val' element ={<CheckValidation/>} />
+
+<Route path= '/myBookings' element ={<MyBookings/>} />
 
    </Routes>
           

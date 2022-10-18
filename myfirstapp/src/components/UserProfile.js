@@ -23,7 +23,7 @@ export default function UserProfile() {
           
           <Link to = "" > <button className='btn btn-primary btn-lg  ggh'> Profile Information </button></Link>
 
-          <Link to = "" > <button className='btn btn-primary btn-lg  ggh'> My Booking </button></Link>
+          <Link to = "/myBookings" > <button className='btn btn-primary btn-lg  ggh'> My Booking </button></Link>
 
           <Link to = "" > <button className='btn btn-primary btn-lg  ggh'>  My Cansalations </button></Link>
 
@@ -45,9 +45,9 @@ export default function UserProfile() {
 
                                <div className="df">
                                    
-                                <h3> User Name </h3>
+                                <h3> User Name : Chamod Bandara </h3>
                                  <br /> <br />
-                                <h3> Email</h3>
+                                <h3> Email : chamodbandara78@gmail.com</h3>
 
                                 <Link to=" "> <button className='btn btn-primary btn-lg' > Edit Profile </button> </Link>
 
