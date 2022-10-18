@@ -20,6 +20,13 @@ export default function AUserReport() {
             })
     },[])
 
+    const repotGen=()=>{
+
+        window.print();
+
+   }
+
+
    const deleteMyEmployee =((id)=>{
 
 
@@ -80,6 +87,8 @@ export default function AUserReport() {
                         </tbody>
                     </table>
                     <br />
+
+                    <button class="btn btn-success" onClick={repotGen}>Print</button>
                     
 
                 </div>

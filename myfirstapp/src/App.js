@@ -74,6 +74,8 @@ import MyBookings from './components/ViewBookings';
 
 import ViewOneBooking from './components/ViewOneBooking'
 
+import Listrep from './components/Listrep';
+
 
 
 
@@ -209,6 +211,24 @@ function App() {
 <Route path= '/val' element ={<CheckValidation/>} />
 
 <Route path= '/myBookings' element ={<MyBookings/>} />
+
+
+
+// reports 
+
+<Route path= '/lists' element ={<Listrep/>} />
+
+<Route path= '/Au' element ={<AUserReport/>} />
+
+<Route path= '/AN' element ={<ANoticeReport/>} />
+
+<Route path= '/AT' element ={<ATrainReport/>} />
+
+<Route path= '/AE' element ={<AEmployee/>} />
+
+
+
+
 
    </Routes>
           
