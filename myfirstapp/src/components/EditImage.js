@@ -1,6 +1,9 @@
 import React from 'react'
 import Header from './Header'
 import './css files/Galery.css';
+import { Link } from 'react-router-dom';      
+
+
 
 
 export default function EditImage() {
@@ -198,7 +201,9 @@ export default function EditImage() {
                 <div className="card-footer">
 
 <button className='btn btn-success jop'>Add</button>
- <button className='btn btn-danger jop'>Delete</button>          
+ <button className='btn btn-danger jop'>Delete</button>    
+
+
 
 </div>
 
@@ -215,7 +220,7 @@ export default function EditImage() {
 
 
 
-
+      <Link to ="/AI"> <button type="button" className='btn btn-primary'> ADD IMAGE </button>  </Link>
 
 
 
