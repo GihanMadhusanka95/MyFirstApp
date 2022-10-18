@@ -62,7 +62,7 @@ export default function AdminPannel() {
            <br />
            <br />
 
-           <button type="button" class="btn btn-secondary btn-lg mt"> <Link to = "/galery" className='tt'> Galery </Link>  </button>
+           <button type="button" class="btn btn-secondary btn-lg mt"> <Link to = "/EI" className='tt'> Galery </Link>  </button>
 
 
            </div>
