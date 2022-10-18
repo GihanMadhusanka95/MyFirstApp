@@ -60,6 +60,8 @@ import AddImage from './components/AddImage';
 
 import EditImage from './components/EditImage';
 
+import Contact from './components/Contact';
+
 
 
 
@@ -183,6 +185,7 @@ function App() {
 
 <Route path= '/EI' element ={<EditImage/>} />
 
+<Route path= '/con' element ={<Contact/>} />
 
 
 

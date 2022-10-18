@@ -198,7 +198,7 @@ export default function EditImage() {
                 <div className="card-footer">
 
 <button className='btn btn-success jop'>Add</button>
- <button className='btn btn-danger jop'>Change</button>          
+ <button className='btn btn-danger jop'>Delete</button>          
 
 </div>
 
