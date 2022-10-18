@@ -62,6 +62,14 @@ import EditImage from './components/EditImage';
 
 import Contact from './components/Contact';
 
+import AUserReport from './components/AUserReport';
+
+import ATrainReport from './components/ATrainReport';
+
+import ANoticeReport from './components/ANoticeReport';
+
+import AEmployee from './components/AEmployee';
+
 
 
 
