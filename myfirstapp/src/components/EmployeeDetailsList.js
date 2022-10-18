@@ -109,10 +109,20 @@ export default function EmployeeDetailsList() {
                         </tbody>
                     </table>
                     <br />
-                    
+                    <Link
+                                to={"/addjob/"}
+                                class="top-bar-link"
+                              >
+                                <button
+                                  class="btn btn-pill btn-success btn-sm"
+                                  style={{ marginLeft: 10, width: 60 }}
+                                >
+                                  Add Job
+                                </button>
+                              </Link>
 
                 </div>
             </div>
-    </div>
-  )
+    </div>
+  )
 }

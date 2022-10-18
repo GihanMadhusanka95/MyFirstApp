@@ -19,6 +19,12 @@ export default function ATrainReport() {
             })
     },[])
 
+    const repotGen=()=>{
+
+      window.print();
+
+ }
+
    const deleteMyEmployee =((id)=>{
 
 
@@ -64,33 +70,7 @@ export default function ATrainReport() {
                                 <td>{bk.StartUpTime}</td>
                                 <td>{bk.TrainType}</td>
 
-                                <td class="table-action">
-                              <button
-                                class="btn btn-pill btn-danger btn-sm"
-                                style={{ marginLeft: 45, width: 60 }}
-                                onClick={() =>{ deleteMyEmployee(bk._id)
-                                    setTimeout(()=>{
-                                        window.location.reload(true);
-                                    },2050)
                                 
-                                }}
-                              >
-                                Delete
-                              </button>
-                              <Link
-                                to={"/TrainEdit/" + bk._id}
-                                class="top-bar-link"
-                              >
-                                <button
-                                  class="btn btn-pill btn-success btn-sm"
-                                  style={{ marginLeft: 10, width: 60 }}
-                                >
-                                  Edit
-                                </button>
-                              </Link>
-                            
-                            </td>
-
 
 
 
@@ -104,6 +84,7 @@ export default function ATrainReport() {
                     </table>
                     <br />
                     
+                    <button class="btn btn-success" onClick={repotGen}>Print</button>
 
                 </div>
             </div>

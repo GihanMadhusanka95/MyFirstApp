@@ -41,7 +41,12 @@ function handleClick() {
    }
    else if(Password ==='') {
       swal('Password cant be empty')
-   }
+   } else if (!validateEmail(Email)){
+      swal('Email is not valid')
+   } 
+   else if (isNaN(ContactNumber) || ContactNumber.length < 10){
+      swal('Contact Number is not valid')
+   }else {
   
 
 
@@ -58,8 +63,17 @@ function handleClick() {
    }).catch((e)=>{
       // alert(e)
    })
+}
 
 };
+
+const validateEmail = (email) => {
+   return String(email)
+     .toLowerCase()
+     .match(
+       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+     );
+ };
 
 
 
@@ -155,37 +169,6 @@ return (
         <Footer/>
       </div>
       
-      </>
-  )
+      </>
+  )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
