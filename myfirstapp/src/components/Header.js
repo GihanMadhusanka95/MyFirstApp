@@ -11,7 +11,7 @@ export default function Header() {
   <ul>
     <li> <Link to = "/" className='tt'> Home </Link> </li>
     <li> <Link to = "/Note" className='tt'> Notice</Link> </li>
-    <li> <Link to = "/galery" className='tt' >Galery</Link> </li>
+    <li> <Link to = "/gallery" className='tt' >Galery</Link> </li>
     <li> <Link to = "/con" className='tt'>Contact Us</Link> </li>
     <li> <Link to = "/us" className='tt'>About Us</Link> </li>
     <li> <Link to = "/login" className='tt'>Login</Link> </li>

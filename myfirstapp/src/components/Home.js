@@ -21,7 +21,7 @@ export default function Home() {
 
   <li class="list-group-item"> <Link to = "/Shedule"> Cansel Ticket  </Link>  </li>
 
-  <li class="list-group-item"> <Link to = "/Shedule"> Pay Online  </Link>  </li>
+  <li class="list-group-item"> <Link to = "/"> Pay Online  </Link>  </li>
 
   <li class="list-group-item"> <Link to = "/vacancy">  Job Vacancy  </Link>  </li>
   
