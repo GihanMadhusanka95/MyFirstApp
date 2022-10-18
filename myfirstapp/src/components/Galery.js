@@ -71,7 +71,7 @@ export default function Galery() {
             <div className="card">
                 <div className="card-body">
                 
-                <img src="./images/Vector1.svg"  alt="" />
+                <img src="./images/1.jpg"  alt="" />
                     
                 </div>
             </div>
@@ -83,7 +83,7 @@ export default function Galery() {
             <div className="card">
                 <div className="card-body">
                  
-                <img src="./images/Vector1.svg"  alt="" />
+                <img src="./images/1.jpg"  alt="" />
                     
                 </div>
             </div>
@@ -99,7 +99,7 @@ export default function Galery() {
                 <div className="card-body">
                      
 
-                <img src="./images/Vector1.svg"  alt="" />
+                <img src="./images/1.jpg"  alt="" />
 
                 </div>
             </div>
@@ -111,7 +111,7 @@ export default function Galery() {
             <div className="card">
                 <div className="card-body">
                    
-                <img src="./images/Vector1.svg"  alt="" />
+                <img src="./images/4.jpg"  alt="" />
                     
                 </div>
             </div>
@@ -123,7 +123,7 @@ export default function Galery() {
             <div className="card">
                 <div className="card-body">
               
-                <img src="./images/Vector1.svg"  alt="" />
+                <img src="./images/4.jpg"  alt="" />
                     
                 </div>
             </div>
